@@ -63,3 +63,10 @@ for k in range(len(select_account)):
       flag = False
     j += 1
 ```
+
+### crontab 에서 파일의 경로를 찾을 수 없다고 로그가 뜰 때
+에러 메세지
+```
+FileNotFoundError: [Errno 2] No such file or directory: './media/BTS_twt.json'
+```
+`./media/~`의 경로를 절대경로로 바꿔 주면 제대로 실행이 된다.
