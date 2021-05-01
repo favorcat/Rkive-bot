@@ -26,6 +26,7 @@ def find_new_tweet(account):
     sendTxt = str(tweet[0].user.name)+'님이 새로운 트윗을 올렸습니다!'+'\n\n'+save_tweet+'\n\n'+save_url
     # 채널의 경우 chat_id = '- n'
     bot.sendMessage(chat_id = '', text=sendTxt)
+    api.PostUpdate(sendTxt)
     
     with open('./media/'+account+'.json', 'w', encoding="utf-8") as make_file:
       for status in tweet:
