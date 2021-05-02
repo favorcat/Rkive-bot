@@ -12,7 +12,7 @@ telgm_token = ''
 bot = telegram.Bot(token = telgm_token)
 
 All_account = ['BTS_twt', 'bts_bighit', 'BTS_jp_official', 'bts_love_myself', 'Smeraldo_Books', 'INTHESOOP_TV', 'BT21_', 'BT21_Japan', 'TinyTANofficial', 'BTSW_official']
-select_account = ['BIGHIT_MUSIC', 'weverseofficial', 'HYBEOFFICIALtwt', 'HYBE_LABELS_JP', 'weverseshop', 'HYBE_MERCH', 'BigHitShop', 'RhythmHive_twt']
+select_account = ['BIGHIT_MUSIC', 'weverseofficial', 'HYBEOFFICIALtwt', 'HYBE_LABELS_JP', 'weverseshop', 'HYBE_MERCH', 'BigHitShop', 'RhythmHive_twt', 'fila_korea', 'Coway_Global']
 
 def find_new_tweet(account):
   with open('./media/'+account+'.json', 'r') as save_file:
@@ -24,9 +24,10 @@ def find_new_tweet(account):
     save_tweet = html.unescape(tweet[0].text)
     save_url = 'https://twitter.com/'+str(tweet[0].user.screen_name)+'/status/'+str(tweet[0].id)
     sendTxt = str(tweet[0].user.name)+'님이 새로운 트윗을 올렸습니다!'+'\n\n'+save_tweet+'\n\n'+save_url
+    twtSendTxt = '@'+str(tweet[0].user.screen_name)+' 님의 새 트윗\n#BTS #BTS_Butter #Rkive'+'\n'+save_url
     # 채널의 경우 chat_id = '- n'
     bot.sendMessage(chat_id = '', text=sendTxt)
-    api.PostUpdate(sendTxt)
+    api.PostUpdate(twtSendTxt)
     
     with open('./media/'+account+'.json', 'w', encoding="utf-8") as make_file:
       for status in tweet:

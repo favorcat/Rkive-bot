@@ -34,6 +34,8 @@ weverseshop
 HYBE_MERCH    
 BigHitShop    
 RhythmHive_twt
+fila_korea
+Coway_Global
 
 
 ### 비어있는 json파일에 트윗 불러오기
