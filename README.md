@@ -33,8 +33,8 @@ HYBE_LABELS_JP
 weverseshop    
 HYBE_MERCH    
 BigHitShop    
-RhythmHive_twt
-fila_korea
+RhythmHive_twt    
+fila_korea    
 Coway_Global
 
 
