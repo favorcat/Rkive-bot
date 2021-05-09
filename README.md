@@ -48,22 +48,21 @@ Coway_Global
 ``` python
 # 계정이 여러 개인 경우, 계정의 id를 list로 만든 후 반복문을 돌리면 된다.
 for i in range(len(All_account)):
-    tweet = api.GetUserTimeline(screen_name=All_account[i], count=1, include_rts=True, exclude_replies=False)
+    tweet = api.GetUserTimeline(screen_name=All_account[i], count=5, include_rts=True, exclude_replies=False)
     with open('./media/'+All_account[i]+'.json', 'w', encoding="utf-8") as make_file:
-        print(tweet[0], file=make_file)
+      json.dump(list(map(lambda x: x.AsDict(), tweet)), make_file)
 ```
 #### 일부 트윗을 불러오는 계정의 경우,
 ``` python
 for k in range(len(select_account)):
-  tweet = api.GetUserTimeline(screen_name=select_account[k], count=100, include_rts=True, exclude_replies=False)
-  flag = True
-  j = 0
-  while (flag == True):
-    if ((tweet[j].text.find("BTS") != -1) or (tweet[j].text.find("방탄소년단") != -1)):
-      with open('./media/'+select_account[k]+'.json', 'w', encoding="utf-8") as make_file:
-        print(tweet[j], file=make_file)
-      flag = False
-    j += 1
+  tweet = api.GetUserTimeline(screen_name=select_account[k], count=10, include_rts=True, exclude_replies=False)
+  ans = []
+  for status in tweet:
+    if (any(status.text.find(x) != -1 for x in ["방탄소년단", "BTS", "TinyTAN"])) :
+      ans.append(status.AsDict())
+    if len(ans) == 5: break
+  with open('./media/'+select_account[k]+'.json', 'w', encoding="utf-8") as make_file:
+    json.dump(ans, make_file)
 ```
 
 ### crontab 에서 파일의 경로를 찾을 수 없다고 로그가 뜰 때
