@@ -35,7 +35,7 @@ def find_new_tweet(account):
             save_tweet = html.unescape(tweet[i].text)
             save_url = 'https://twitter.com/'+str(tweet[i].user.screen_name)+'/status/'+str(tweet[i].id)
             sendTxt = str(tweet[i].user.name)+'님이 새로운 트윗을 올렸습니다!'+'\n\n'+save_tweet+'\n\n'+save_url
-            twtSendTxt = str(tweet[i].user.screen_name)+' 님의 새 트윗\n#BTS #BTS_Butter #Rkive #JIN #석진 #SUGA #윤기 #RM #남준 #JHOPE #호석 #JIMIN #지민 #V #태형 #정국 #JK'+'\n'+save_url
+            twtSendTxt = str(tweet[i].user.name)+'(@'+str(tweet[i].user.screen_name)+')님의 새 트윗'+'\n#BTS #BTS_Butter #Rkive #JIN #석진 #SUGA #윤기 #RM #남준 #JHOPE #호석 #JIMIN #지민 #V #태형 #정국 #JK'+'\n'+save_url
 
             # 채널의 경우 chat_id = '- n'
             bot.sendMessage(chat_id = '', text=sendTxt)
@@ -68,7 +68,7 @@ def find_BTS_new_tweet(account):
             save_tweet = html.unescape(ans[i]['text'])
             save_url = 'https://twitter.com/'+str(ans[i]['user']['screen_name'])+'/status/'+str(ans[i]['id'])
             sendTxt = str(ans[i]['user']['name'])+'님이 새로운 트윗을 올렸습니다!'+'\n\n'+save_tweet+'\n\n'+save_url
-            twtSendTxt = str(ans[i]['user']['screen_name'])+' 님의 새 트윗\n#BTS #BTS_Butter #Rkive #JIN #석진 #SUGA #윤기 #RM #남준 #JHOPE #호석 #JIMIN #지민 #V #태형 #정국 #JK'+'\n'+save_url
+            twtSendTxt = str(ans[i]['user']['name'])+'(@'+str(ans[i]['user']['screen_name'])+')님의 새 트윗\n#BTS #BTS_Butter #Rkive #JIN #석진 #SUGA #윤기 #RM #남준 #JHOPE #호석 #JIMIN #지민 #V #태형 #정국 #JK'+'\n'+save_url
 
             # 채널의 경우 chat_id = '- n'
             bot.sendMessage(chat_id = '', text=sendTxt)
