@@ -40,7 +40,7 @@ def find_new_tweet(account):
                 bot.sendMessage(chat_id = '', text=sendTxt)
                 api.PostUpdate(twtSendTxt)
 
-                print(str(tweet[0].user.name)+'님이 새로운 트윗을 올렸습니다!')
+                print(str(tweet[i].user.name)+'님이 새로운 트윗을 올렸습니다!')
 
             with open('./media/'+account+'.json', 'w', encoding="utf-8") as make_file:
                 json.dump(list(map(lambda x: x.AsDict(), tweet)), make_file)
@@ -73,7 +73,7 @@ def find_BTS_new_tweet(account):
                 bot.sendMessage(chat_id = '', text=sendTxt)
                 api.PostUpdate(twtSendTxt)
 
-                print(str(tweet[0].user.name)+'님이 새로운 트윗을 올렸습니다!')
+                print(str(ans[i]['user']['name'])+'님이 새로운 트윗을 올렸습니다!')
 
             with open('./media/'+account+'.json', 'w', encoding="utf-8") as make_file:
                 json.dump(ans, make_file)
