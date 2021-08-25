@@ -12,8 +12,8 @@ api = twitter.Api(consumer_key='',
 telgm_token = ''
 bot = telegram.Bot(token = telgm_token)
 
-All_account = ['BTS_twt', 'bts_bighit', 'BTS_jp_official', 'bts_love_myself', 'Smeraldo_Books', 'INTHESOOP_TV', 'BT21_', 'BT21_Japan', 'TinyTANofficial', 'BTSW_official']
-select_account = ['BIGHIT_MUSIC', 'weverseofficial', 'HYBEOFFICIALtwt', 'HYBE_LABELS_JP', 'weverseshop', 'HYBE_MERCH', 'BigHitShop', 'RhythmHive_twt', 'fila_korea', 'Coway_Global']
+All_account = ['BTS_twt', 'bts_bighit', 'BTS_jp_official', 'bts_love_myself', 'Smeraldo_Books', 'BT21_', 'BT21_Japan', 'TinyTANofficial', 'BTSW_official']
+select_account = ['BIGHIT_MUSIC', 'weverseofficial', 'HYBEOFFICIALtwt', 'HYBE_LABELS_JP', 'weverseshop', 'HYBE_MERCH', 'BigHitShop', 'INTHESOOP_TV', 'RhythmHive_twt', 'fila_korea', 'Coway_Global']
 
 # 로그
 print(datetime.today().strftime("%Y.%m.%d %H:%M:%S"))

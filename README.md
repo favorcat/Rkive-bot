@@ -19,7 +19,6 @@ bts_bighit
 BTS_jp_official    
 bts_love_myself    
 Smeraldo_Books    
-INTHESOOP_TV    
 BT21_    
 BT21_Japan    
 TinyTANofficial    
@@ -33,6 +32,7 @@ HYBE_LABELS_JP
 weverseshop    
 HYBE_MERCH    
 BigHitShop    
+INTHESOOP_TV    
 RhythmHive_twt    
 fila_korea    
 Coway_Global
