@@ -77,3 +77,9 @@ for k in range(len(select_account)):
 FileNotFoundError: [Errno 2] No such file or directory: './media/BTS_twt.json'
 ```
 `./media/~`의 경로를 절대경로로 바꿔 주면 제대로 실행이 된다.
+
+### 서버 crontab 설정
+```
+* * * * * /usr/bin/python3 /home/rkive/Rkive-bot/main.py >> /home/rkive/Rkive-bot/log/`date +\%Y년_\%m월\%d일_\%H시`.log  2>&1
+```
+- log 폴더 생성을 해 주어야 로그가 제대로 생성이 된다.
