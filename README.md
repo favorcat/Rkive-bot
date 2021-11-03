@@ -2,6 +2,12 @@
 ### [Rkive](https://www.rkive.cloud)의 알림 봇 ([Telegram](https://t.me/RkiveCloud) / [Twitter](https://twitter.com/RkiveCloud))
 방탄소년단과 관련된 공식 계정들의 새로운 트윗이 올라올 때 알림을 받을 수 있다.    
 
+### 서버에 파이썬 및 pip 설치
+```
+apt install python3
+apt-get install python3-pip
+```
+
 ### 사용 전 설치해야 할 모듈
 ```
 pip3 install python-twitter
