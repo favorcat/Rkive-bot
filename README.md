@@ -83,3 +83,8 @@ FileNotFoundError: [Errno 2] No such file or directory: './media/BTS_twt.json'
 * * * * * /usr/bin/python3 /home/rkive/Rkive-bot/main.py >> /home/rkive/Rkive-bot/log/`date +\%Y년_\%m월\%d일_\%H시`.log  2>&1
 ```
 - log 폴더 생성을 해 주어야 로그가 제대로 생성이 된다.
+
+### UTC 기준으로 log가 생성된다면 KST로 변경
+```
+sudo timedatectl set-timezone Asia/Seoul
+```
